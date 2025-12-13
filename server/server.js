@@ -11,7 +11,15 @@ connectDB();
 const app = express();
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: [
+    "https://www.autofreaks.in",
+    "https://autofreaks.in",
+    "https://api.autofreaks.in",
+    "http://localhost:5173"
+  ],
+  credentials: true
+}));
 app.use(express.json());
 
 // ✅ Base Route
