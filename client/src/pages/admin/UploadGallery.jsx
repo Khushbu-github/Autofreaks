@@ -50,21 +50,21 @@ const UploadGallery = () => {
 
     return (
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-            <Link to="/admin/dashboard" className="inline-flex items-center text-gray-500 hover:text-gray-900 mb-8 transition-colors">
+            <Link to="/admin/dashboard" className="inline-flex items-center text-gray-400 hover:text-white mb-8 transition-colors">
                 <ChevronLeft className="h-5 w-5 mr-1" /> Back to Dashboard
             </Link>
 
-            <div className="bg-white rounded-2xl shadow-lg overflow-hidden border border-gray-100">
-                <div className="p-8 border-b border-gray-100">
-                    <h1 className="text-2xl font-bold text-gray-900 flex items-center gap-2">
-                        <Upload className="h-6 w-6 text-blue-600" />
+            <div className="bg-gray-900/50 backdrop-blur rounded-2xl shadow-lg overflow-hidden border border-gray-800">
+                <div className="p-8 border-b border-gray-800">
+                    <h1 className="text-2xl font-bold text-white flex items-center gap-2 italic">
+                        <Upload className="h-6 w-6 text-white" />
                         Upload New Image
                     </h1>
                 </div>
 
                 <div className="p-8">
                     {message && (
-                        <div className={`p-4 rounded-lg mb-6 flex items-center ${message.includes('success') ? 'bg-green-50 text-green-700' : 'bg-red-50 text-red-700'}`}>
+                        <div className={`p-4 rounded-lg mb-6 flex items-center ${message.includes('success') ? 'bg-gray-800 text-white border border-gray-600' : 'bg-gray-800 text-gray-300 border border-gray-600'}`}>
                             {message.includes('success') ? <Check className="h-5 w-5 mr-2" /> : <X className="h-5 w-5 mr-2" />}
                             {message}
                         </div>
@@ -72,19 +72,19 @@ const UploadGallery = () => {
 
                     <form onSubmit={handleUpload} className="space-y-6">
                         <div>
-                            <label className="block text-sm font-medium text-gray-700 mb-2">Image Title (Optional)</label>
+                            <label className="block text-sm font-medium text-gray-300 mb-2">Image Title (Optional)</label>
                             <input
                                 type="text"
                                 value={title}
                                 onChange={(e) => setTitle(e.target.value)}
-                                className="block w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 sm:text-sm transition-colors"
+                                className="block w-full px-4 py-3 border border-gray-700 bg-gray-900 text-white rounded-lg focus:ring-white focus:border-white sm:text-sm transition-colors placeholder-gray-500"
                                 placeholder="e.g., Happy Customer with Honda City"
                             />
                         </div>
 
                         <div>
-                            <label className="block text-sm font-medium text-gray-700 mb-2">Select Image</label>
-                            <div className="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-lg hover:border-blue-400 transition-colors cursor-pointer relative bg-gray-50 hover:bg-gray-100" onClick={() => document.getElementById('file-upload').click()}>
+                            <label className="block text-sm font-medium text-gray-300 mb-2">Select Image</label>
+                            <div className="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-700 border-dashed rounded-lg hover:border-white transition-colors cursor-pointer relative bg-gray-800/50 hover:bg-gray-800" onClick={() => document.getElementById('file-upload').click()}>
                                 <div className="space-y-1 text-center">
                                     {preview ? (
                                         <div className="relative inline-block group">
@@ -106,9 +106,9 @@ const UploadGallery = () => {
                                         </div>
                                     ) : (
                                         <>
-                                            <ImageIcon className="mx-auto h-12 w-12 text-gray-400" />
-                                            <div className="flex text-sm text-gray-600 justify-center">
-                                                <span className="relative cursor-pointer rounded-md font-medium text-blue-600 hover:text-blue-500 focus-within:outline-none">
+                                            <ImageIcon className="mx-auto h-12 w-12 text-gray-500" />
+                                            <div className="flex text-sm text-gray-400 justify-center">
+                                                <span className="relative cursor-pointer rounded-md font-medium text-white hover:text-gray-300 focus-within:outline-none">
                                                     <span>Upload a file</span>
                                                 </span>
                                                 <p className="pl-1">or drag and drop</p>
@@ -125,7 +125,7 @@ const UploadGallery = () => {
                             <button
                                 type="submit"
                                 disabled={!file || loading}
-                                className={`inline-flex items-center px-8 py-3 border border-transparent text-base font-semibold rounded-lg shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all transform hover:-translate-y-0.5 ${loading || !file ? 'opacity-50 cursor-not-allowed' : ''}`}
+                                className={`inline-flex items-center px-8 py-3 border border-transparent text-base font-semibold rounded-lg shadow-sm text-black bg-white hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-white transition-all transform hover:-translate-y-0.5 ${loading || !file ? 'opacity-50 cursor-not-allowed' : ''}`}
                             >
                                 {loading ? 'Uploading...' : 'Upload Image'}
                             </button>

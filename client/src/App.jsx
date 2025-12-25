@@ -10,11 +10,12 @@ import Dashboard from './pages/admin/Dashboard';
 import UploadGallery from './pages/admin/UploadGallery';
 import ManageGallery from './pages/admin/ManageGallery';
 import ProtectedRoute from './components/ProtectedRoute';
+import Footer from './components/Footer';
 
 function App() {
   return (
     <Router>
-      <div className="min-h-screen bg-gray-50 text-gray-900 font-sans">
+      <div className="min-h-screen bg-[#0a0a0a] bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-gray-900 via-[#0a0a0a] to-black text-gray-100 font-sans">
         <Navbar />
         <main>
           <Routes>
@@ -33,6 +34,7 @@ function App() {
             </Route>
           </Routes>
         </main>
+        <Footer />
       </div>
     </Router>
   );
