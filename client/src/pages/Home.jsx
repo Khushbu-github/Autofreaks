@@ -7,7 +7,7 @@ import Brands from '../components/Brands';
 
 const Home = () => {
     return (
-        <div className="bg-transparent">
+        <div className="bg-transparent pt-28 lg:pt-24">
             {/* Hero Section */}
             <div className="relative bg-gray-900 text-white">
                 <div className="absolute inset-0">

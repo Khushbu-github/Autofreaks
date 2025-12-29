@@ -10,7 +10,7 @@ const CarDetails = () => {
 
     if (!car) {
         return (
-            <div className="min-h-[50vh] flex flex-col items-center justify-center pt-20">
+            <div className="min-h-[50vh] flex flex-col items-center justify-center pt-28 lg:pt-24">
                 <h2 className="text-2xl font-bold text-white">Car not found</h2>
                 <Link to="/cars" className="text-white hover:text-gray-300 mt-4 font-medium border-b border-white pb-1">Return to Inventory</Link>
             </div>

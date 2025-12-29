@@ -4,7 +4,7 @@ import { Phone, Mail, MapPin } from 'lucide-react';
 
 const Contact = () => {
     return (
-        <div className="flex flex-col min-h-screen bg-[#0a0a0a]">
+        <div className="flex flex-col min-h-screen bg-[#0a0a0a] pt-28 lg:pt-24">
             {/* Hero Section */}
             <div className="relative h-[40vh] bg-black flex items-center justify-center overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-r from-black via-transparent to-black z-10" />
