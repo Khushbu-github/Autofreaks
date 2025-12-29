@@ -19,36 +19,43 @@ const getGallery = async (req, res) => {
 // @access  Private (Admin)
 const uploadImage = async (req, res) => {
     try {
-        if (!req.file) {
-            return res.status(400).json({ message: 'No file uploaded' });
+        if (!req.files || req.files.length === 0) {
+            return res.status(400).json({ message: 'No files uploaded' });
         }
 
-        // Upload to Cloudinary
-        const result = await cloudinary.uploader.upload(req.file.path, {
-            folder: 'car-dealership-gallery'
-        });
+        const uploadedImages = [];
 
-        // Create DB entry
-        const image = await Gallery.create({
-            imageUrl: result.secure_url,
-            publicId: result.public_id,
-            title: req.body.title || ''
-        });
-
-        // Remove file from local storage
-        fs.unlinkSync(req.file.path);
-
-        res.status(201).json(image);
-    } catch (error) {
-        console.error('Gallery Upload Error:', error);
-        // Remove file if error occurred
-        if (req.file && fs.existsSync(req.file.path)) {
+        // Loop through all uploaded files
+        for (const file of req.files) {
             try {
-                fs.unlinkSync(req.file.path);
-            } catch (unlinkError) {
-                console.error('Error deleting file:', unlinkError);
+                // Upload to Cloudinary
+                const result = await cloudinary.uploader.upload(file.path, {
+                    folder: 'car-dealership-gallery'
+                });
+
+                // Create DB entry
+                const image = await Gallery.create({
+                    imageUrl: result.secure_url,
+                    publicId: result.public_id,
+                    title: req.body.title || ''
+                });
+
+                uploadedImages.push(image);
+
+                // Remove file from local storage
+                fs.unlinkSync(file.path);
+            } catch (uploadError) {
+                console.error('Individual File Upload Error:', uploadError);
+                // Try to remove local file even if upload failed
+                if (fs.existsSync(file.path)) {
+                    fs.unlinkSync(file.path);
+                }
             }
         }
+
+        res.status(201).json(uploadedImages);
+    } catch (error) {
+        console.error('Gallery Batch Upload Error:', error);
         res.status(500).json({ 
             message: 'Upload failed', 
             error: error.message 

@@ -12,7 +12,7 @@ const Cars = () => {
     );
 
     return (
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-12">
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-10">
                 <div>
                     <h1 className="text-4xl font-bold text-white italic tracking-wide">Current Inventory</h1>
@@ -52,7 +52,7 @@ const Cars = () => {
                             <div className="p-6">
                                 <p className="text-sm text-gray-400 font-bold mb-1 uppercase tracking-wider">{car.brand}</p>
                                 <h3 className="text-xl font-bold text-white mb-2 group-hover:text-gray-200 transition-colors">{car.name}</h3>
-                                <p className="text-2xl font-bold text-gray-100 mb-6">₹ {car.price.toLocaleString()}</p>
+                                <p className="text-2xl font-bold text-gray-100 mb-6">{car.price ? `₹ ${car.price.toLocaleString()}` : 'Contact for Price'}</p>
                                 <Link
                                     to={`/cars/${car.id}`}
                                     className="block w-full text-center bg-transparent text-white font-semibold py-3 rounded-xl border border-gray-700 hover:bg-white hover:border-white hover:text-black transition-all uppercase tracking-wide text-sm"

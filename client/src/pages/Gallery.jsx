@@ -21,7 +21,7 @@ const Gallery = () => {
     }, []);
 
     return (
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-12">
             <div className="text-center mb-12">
                 <h1 className="text-3xl font-bold text-white italic tracking-wide">Photo Gallery</h1>
                 <p className="mt-4 text-gray-400">A showcase of our finest deliveries and inventory.</p>

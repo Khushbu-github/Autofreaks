@@ -11,6 +11,10 @@ import UploadGallery from './pages/admin/UploadGallery';
 import ManageGallery from './pages/admin/ManageGallery';
 import ProtectedRoute from './components/ProtectedRoute';
 import Footer from './components/Footer';
+import About from './pages/About';
+import Contact from './pages/Contact';
+import SellCar from './pages/SellCar';
+import BuyCar from './pages/BuyCar';
 
 function App() {
   return (
@@ -21,6 +25,10 @@ function App() {
           <Routes>
             {/* Public Routes */}
             <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/sell" element={<SellCar />} />
+            <Route path="/buy" element={<BuyCar />} />
             <Route path="/cars" element={<Cars />} />
             <Route path="/cars/:id" element={<CarDetails />} />
             <Route path="/gallery" element={<Gallery />} />

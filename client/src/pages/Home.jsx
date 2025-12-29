@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { ArrowRight, CheckCircle } from 'lucide-react';
 import HeroImage from '../assets/Home.avif';
+import Testimonials from '../components/Testimonials';
+import Brands from '../components/Brands';
 
 const Home = () => {
     return (
@@ -18,14 +20,17 @@ const Home = () => {
                 </div>
                 <div className="relative max-w-7xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8">
                     <div className="max-w-2xl animate-in slide-in-from-left duration-700">
-                        <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl text-white">
-                            Find Your <span className="text-white italic bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-400">Dream Car</span>
+                        <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl text-white mb-6">
+                            Autofreaks <span className="block text-red-600 mt-2">World of Luxury</span>
                         </h1>
-                        <p className="mt-6 text-xl text-gray-300 max-w-3xl leading-relaxed">
-                            Premium selection of pre-owned luxury vehicles. Quality checked, certified, and ready for you to drive home today.
+                        <p className="text-2xl font-medium text-white italic mb-8">
+                            "Eye it, Drive it, Own it"
                         </p>
-                        <div className="mt-10">
-                            <Link to="/cars" className="inline-flex items-center px-8 py-4 border border-white/20 text-base font-bold uppercase tracking-wide rounded-full text-black bg-white hover:bg-gray-200 transition-all transform hover:scale-105 shadow-xl shadow-white/10">
+                        <p className="text-xl text-gray-300 max-w-3xl leading-relaxed mb-10">
+                            Curated by CEO Deepak. Your trusted destination for pre-owned luxury cars in Jayanagar, Bangalore.
+                        </p>
+                        <div>
+                            <Link to="/cars" className="inline-flex items-center px-8 py-4 border border-red-600 text-base font-bold uppercase tracking-wide rounded-full text-white bg-red-600/10 hover:bg-red-600 transition-all transform hover:scale-105 shadow-[0_0_20px_rgba(220,38,38,0.3)]">
                                 Browse Inventory <ArrowRight className="ml-2 h-5 w-5" />
                             </Link>
                         </div>
@@ -59,6 +64,12 @@ const Home = () => {
                     </div>
                 </div>
             </div>
+
+            {/* Brands Section */}
+            <Brands />
+
+            {/* Testimonials Section */}
+            <Testimonials />
         </div>
     );
 };

@@ -15,7 +15,7 @@ const Footer = () => {
                             <span className="font-bold text-xl text-white tracking-tight italic">Autofreaks</span>
                         </Link>
                         <p className="text-sm leading-relaxed">
-                            Experience excellence in every drive. autofreaks offers a curated selection of premium vehicles, combined with unparalleled service to redefine your automotive journey.
+                            "Eye it, Drive it, Own it". Autofreaks offers a curated selection of premium vehicles, combined with unparalleled service to redefine your automotive journey.
                         </p>
                         <div className="flex space-x-4">
                             <a href="#" className="hover:text-red-500 transition-colors">
@@ -47,15 +47,15 @@ const Footer = () => {
                         <ul className="space-y-3 text-sm">
                             <li className="flex items-start gap-3">
                                 <MapPin size={18} className="text-red-500 shrink-0" />
-                                <span>123 Motor Avenue, Auto District, New York, NY 10001</span>
+                                <span>540, 8th Cross Road, Jayanagar 7th Block, Bengaluru 560070, Karnataka, India</span>
                             </li>
                             <li className="flex items-center gap-3">
                                 <Phone size={18} className="text-red-500 shrink-0" />
-                                <span>+1 (234) 567-890</span>
+                                <span>+91 99000 09946</span>
                             </li>
                             <li className="flex items-center gap-3">
                                 <Mail size={18} className="text-red-500 shrink-0" />
-                                <span>contact@autofreaks.com</span>
+                                <span>deerealmadrider@gmail.com</span>
                             </li>
                         </ul>
                     </div>

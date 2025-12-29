@@ -26,7 +26,7 @@ const Login = () => {
     };
 
     return (
-        <div className="min-h-screen bg-transparent flex flex-col justify-center py-12 sm:px-6 lg:px-8">
+        <div className="min-h-screen bg-transparent flex flex-col justify-center pt-28 pb-12 px-4 sm:px-6 lg:px-8">
             <div className="sm:mx-auto sm:w-full sm:max-w-md">
                 <div className="mx-auto h-16 w-16 bg-white rounded-full flex items-center justify-center shadow-lg transform hover:rotate-12 transition-transform shadow-white/20">
                     <Lock className="h-8 w-8 text-black" />
