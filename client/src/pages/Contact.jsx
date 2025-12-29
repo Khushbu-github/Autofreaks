@@ -43,9 +43,14 @@ const Contact = () => {
                         <p className="text-gray-400 mb-4">
                             Available for inquiries and support.
                         </p>
-                        <a href="https://wa.me/919900009946" className="text-white font-medium hover:text-red-500 transition-colors">
-                            +91 99000 09946
-                        </a>
+                        <div className="space-y-3">
+                            <a href="tel:+919900009946" className="block text-white font-medium hover:text-red-500 transition-colors">
+                                📞 +91 99000 09946
+                            </a>
+                            <a href="https://wa.me/919900009946" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 text-green-500 font-medium hover:text-green-400 transition-colors">
+                                💬 Chat on WhatsApp
+                            </a>
+                        </div>
                     </div>
 
                     {/* Email Card */}
