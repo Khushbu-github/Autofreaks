@@ -35,7 +35,7 @@ const ManageGallery = () => {
     };
 
     return (
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-12">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-8">
                 <Link to="/admin/dashboard" className="inline-flex items-center text-gray-400 hover:text-white transition-colors">
                     <ChevronLeft className="h-5 w-5 mr-1" /> Back to Dashboard

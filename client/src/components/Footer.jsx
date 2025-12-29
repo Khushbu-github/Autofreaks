@@ -11,11 +11,11 @@ const Footer = () => {
                     {/* Brand Section */}
                     <div className="space-y-4">
                         <Link to="/" className="flex items-center gap-2">
-                            <img src={Logo} alt="Autofreaks" className="h-8 w-auto" />
-                            <span className="font-bold text-xl text-white tracking-tight italic">Autofreaks</span>
+                            <img src={Logo} alt="AUTOFREAKS" className="h-8 w-auto" />
+                            <span className="font-bold text-xl text-white tracking-tight italic">AUTOFREAKS</span>
                         </Link>
                         <p className="text-sm leading-relaxed">
-                            "Eye it, Drive it, Own it". Autofreaks offers a curated selection of premium vehicles, combined with unparalleled service to redefine your automotive journey.
+                            "Eye it, Drive it, Own it". AUTOFREAKS offers a curated selection of premium vehicles, combined with unparalleled service to redefine your automotive journey.
                         </p>
                         <div className="flex space-x-4">
                             <a href="#" className="hover:text-red-500 transition-colors">
@@ -81,7 +81,7 @@ const Footer = () => {
                 </div>
 
                 <div className="mt-12 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
-                    <p>© {new Date().getFullYear()} Autofreaks Car Dealership. All rights reserved.</p>
+                    <p>© {new Date().getFullYear()} AUTOFREAKS Car Dealership. All rights reserved.</p>
                     <div className="flex gap-6">
                         <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
                         <a href="#" className="hover:text-white transition-colors">Terms of Service</a>

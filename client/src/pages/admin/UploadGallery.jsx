@@ -69,7 +69,7 @@ const UploadGallery = () => {
     };
 
     return (
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 pt-28 pb-12">
             <Link to="/admin/dashboard" className="inline-flex items-center text-gray-400 hover:text-white mb-8 transition-colors">
                 <ChevronLeft className="h-5 w-5 mr-1" /> Back to Dashboard
             </Link>

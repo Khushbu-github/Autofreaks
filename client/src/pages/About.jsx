@@ -23,9 +23,9 @@ const About = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-start mb-24">
                     <div className="space-y-6">
                         <div>
-                            <h2 className="text-3xl font-bold text-white mb-4">🏎️ Autofreaks - World of Luxury</h2>
+                            <h2 className="text-3xl font-bold text-white mb-4">🏎️ AUTOFREAKS - World of Luxury</h2>
                             <p className="text-gray-400 leading-relaxed text-lg">
-                                Your trusted destination for pre-owned luxury cars. Autofreaks in Jayanagar, Bangalore is a premier showroom showcasing premium used luxury cars including Mercedes Benz, BMW, and Audi with certified quality inspection.
+                                Your trusted destination for pre-owned luxury cars. AUTOFREAKS in Jayanagar, Bangalore is a premier showroom showcasing premium used luxury cars including Mercedes Benz, BMW, and Audi with certified quality inspection.
                             </p>
                         </div>
 
