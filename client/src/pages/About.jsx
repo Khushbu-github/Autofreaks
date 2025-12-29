@@ -1,5 +1,6 @@
 
 import React from 'react';
+import DeepakImage from '../assets/Deepak.JPG';
 
 const About = () => {
     return (
@@ -69,6 +70,20 @@ const About = () => {
                     </div>
 
                     <div className="max-w-4xl mx-auto text-center space-y-12">
+                        {/* CEO Image */}
+                        <div className="flex justify-center">
+                            <div className="relative group">
+                                <div className="absolute -inset-1 bg-gradient-to-r from-red-600 to-red-900 rounded-2xl blur opacity-75 group-hover:opacity-100 transition duration-1000"></div>
+                                <div className="relative">
+                                    <img
+                                        src={DeepakImage}
+                                        alt="Deepak - CEO"
+                                        className="w-64 h-64 md:w-80 md:h-80 rounded-2xl object-cover border-4 border-gray-900 shadow-2xl"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+
                         <div className="space-y-4">
                             <h2 className="text-5xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-b from-white to-gray-600 tracking-tight">
                                 DEEPAK
