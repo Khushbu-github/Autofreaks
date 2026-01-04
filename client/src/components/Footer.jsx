@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Instagram, Twitter, Mail, Phone, MapPin, Car, MessageCircle } from 'lucide-react';
+import { Instagram, Twitter, Mail, Phone, MapPin, Car, MessageCircle, Facebook } from 'lucide-react';
 import Logo from '../assets/Logo.png';
 
 const Footer = () => {
@@ -24,8 +24,8 @@ const Footer = () => {
                             <a href="https://wa.me/919900009946" target="_blank" rel="noopener noreferrer" className="hover:text-red-500 transition-colors">
                                 <MessageCircle size={20} />
                             </a>
-                            <a href="#" className="hover:text-red-500 transition-colors">
-                                <Twitter size={20} />
+                            <a href="https://www.facebook.com/share/17zjae8TA2/" target="_blank" rel="noopener noreferrer" className="hover:text-red-500 transition-colors">
+                                <Facebook size={20} />
                             </a>
                         </div>
                     </div>
