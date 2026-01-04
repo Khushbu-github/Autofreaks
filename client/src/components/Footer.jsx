@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Facebook, Instagram, Twitter, Mail, Phone, MapPin, Car } from 'lucide-react';
+import { Instagram, Twitter, Mail, Phone, MapPin, Car, MessageCircle } from 'lucide-react';
 import Logo from '../assets/Logo.png';
 
 const Footer = () => {
@@ -18,11 +18,11 @@ const Footer = () => {
                             "Eye it, Drive it, Own it". AUTOFREAKS offers a curated selection of premium vehicles, combined with unparalleled service to redefine your automotive journey.
                         </p>
                         <div className="flex space-x-4">
-                            <a href="#" className="hover:text-red-500 transition-colors">
+                            <a href="https://www.instagram.com/deepak_autofreaks_?igsh=MWF5MXJoOGpqbDkybg==" target="_blank" rel="noopener noreferrer" className="hover:text-red-500 transition-colors">
                                 <Instagram size={20} />
                             </a>
-                            <a href="#" className="hover:text-red-500 transition-colors">
-                                <Facebook size={20} />
+                            <a href="https://wa.me/919900009946" target="_blank" rel="noopener noreferrer" className="hover:text-red-500 transition-colors">
+                                <MessageCircle size={20} />
                             </a>
                             <a href="#" className="hover:text-red-500 transition-colors">
                                 <Twitter size={20} />
@@ -77,7 +77,7 @@ const Footer = () => {
                 </div>
 
                 <div className="mt-12 pt-8 border-t border-gray-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
-                    <p>© {new Date().getFullYear()} AUTOFREAKS Car Dealership. All rights reserved.</p>
+                    <p>© {new Date().getFullYear()} Khushbu ajdigitals +91 7483 662 048. All rights reserved.</p>
                     <div className="flex gap-6">
                         <a href="#" className="hover:text-white transition-colors">Privacy Policy</a>
                         <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
