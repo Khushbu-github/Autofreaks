@@ -11,7 +11,7 @@ import Gallery from './pages/Gallery';
 import Login from './pages/admin/Login';
 import Dashboard from './pages/admin/Dashboard';
 import UploadGallery from './pages/admin/UploadGallery';
-import UploadGallery from './pages/admin/UploadGallery';
+
 import ManageGallery from './pages/admin/ManageGallery';
 import ManageCars from './pages/admin/ManageCars';
 import AddCar from './pages/admin/AddCar';
