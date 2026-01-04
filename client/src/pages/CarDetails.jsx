@@ -1,12 +1,39 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { cars } from '../data/cars';
-import { ChevronLeft, Calendar, Shield, Gauge, Fuel, Users, FileText, Settings, Layers, MapPin } from 'lucide-react';
+import axios from '../utils/axios';
+import { ChevronLeft, Calendar, Shield, Gauge, Fuel, Users, Settings, Layers, MapPin, Zap, Loader } from 'lucide-react';
 
 const CarDetails = () => {
     const { id } = useParams();
-    const car = cars.find((c) => c.id === parseInt(id));
-    const [mainImage, setMainImage] = useState(car ? car.images[0] : null);
+    const [car, setCar] = useState(null);
+    const [loading, setLoading] = useState(true);
+    const [mainImage, setMainImage] = useState(null);
+
+    useEffect(() => {
+        const fetchCar = async () => {
+            try {
+                const { data } = await axios.get(`/cars/${id}`);
+                setCar(data);
+                if (data.images && data.images.length > 0) {
+                    setMainImage(data.images[0].url);
+                }
+            } catch (error) {
+                console.error(error);
+            } finally {
+                setLoading(false);
+            }
+        };
+        fetchCar();
+    }, [id]);
+
+
+    if (loading) {
+        return (
+            <div className="min-h-screen flex items-center justify-center bg-black">
+                <Loader className="h-10 w-10 text-white animate-spin" />
+            </div>
+        );
+    }
 
     if (!car) {
         return (
@@ -15,6 +42,18 @@ const CarDetails = () => {
                 <Link to="/cars" className="text-white hover:text-gray-300 mt-4 font-medium border-b border-white pb-1">Return to Inventory</Link>
             </div>
         );
+    }
+
+    // Helper to safely parse features if they come as string
+    let featuresList = [];
+    if (Array.isArray(car.features)) {
+        featuresList = car.features;
+    } else if (typeof car.features === 'string') {
+        try {
+            featuresList = JSON.parse(car.features);
+        } catch (e) {
+            featuresList = car.features.split(',').map(f => f.trim());
+        }
     }
 
     return (
@@ -26,20 +65,26 @@ const CarDetails = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
                 <div className="space-y-6">
                     <div className="w-full flex justify-center items-center bg-gray-900 rounded-3xl overflow-hidden shadow-2xl border border-gray-700">
-                        <img src={mainImage || car.images[0]} alt={car.name} className="max-h-[70vh] w-auto max-w-full object-contain" />
+                        {mainImage ? (
+                            <img src={mainImage} alt={car.name} className="max-h-[70vh] w-auto max-w-full object-contain" />
+                        ) : (
+                            <div className="h-64 flex items-center justify-center text-gray-500">No Image Available</div>
+                        )}
                     </div>
                     {/* Image Gallery */}
-                    <div className="grid grid-cols-4 gap-4">
-                        {car.images.map((img, index) => (
-                            <button
-                                key={index}
-                                onClick={() => setMainImage(img)}
-                                className={`rounded-xl overflow-hidden border-2 transition-all duration-200 h-20 ${mainImage === img ? 'border-red-500 scale-105' : 'border-transparent hover:border-gray-500'}`}
-                            >
-                                <img src={img} alt={`${car.name} ${index + 1}`} className="w-full h-full object-cover" />
-                            </button>
-                        ))}
-                    </div>
+                    {car.images && car.images.length > 1 && (
+                        <div className="grid grid-cols-4 gap-4">
+                            {car.images.map((img, index) => (
+                                <button
+                                    key={index}
+                                    onClick={() => setMainImage(img.url)}
+                                    className={`rounded-xl overflow-hidden border-2 transition-all duration-200 h-20 ${mainImage === img.url ? 'border-red-500 scale-105' : 'border-transparent hover:border-gray-500'}`}
+                                >
+                                    <img src={img.url} alt={`${car.name} ${index + 1}`} className="w-full h-full object-cover" />
+                                </button>
+                            ))}
+                        </div>
+                    )}
                 </div>
 
                 <div className="flex flex-col">
@@ -125,11 +170,11 @@ const CarDetails = () => {
                         </div>
                     ) : null}
 
-                    {car.features && car.features.length > 0 && (
+                    {featuresList && featuresList.length > 0 && (
                         <div className="mb-10">
                             <h3 className="text-xl font-bold text-white mb-4">Key Features</h3>
                             <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                                {car.features.map((feature, idx) => (
+                                {featuresList.map((feature, idx) => (
                                     <li key={idx} className="flex items-center text-gray-300">
                                         <div className="h-1.5 w-1.5 rounded-full bg-red-500 mr-2"></div>
                                         {feature}

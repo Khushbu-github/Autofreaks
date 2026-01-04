@@ -38,6 +38,7 @@ app.get('/api', (req, res) => {
 // Routes
 app.use('/auth', require('./routes/auth'));
 app.use('/gallery', require('./routes/gallery'));
+app.use('/cars', require('./routes/cars'));
 
 // Create uploads folder if it doesn't exist
 const uploadsDir = path.join(__dirname, 'uploads');

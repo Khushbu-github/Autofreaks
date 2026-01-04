@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { Upload, Image, LogOut, LayoutDashboard } from 'lucide-react';
+import { Upload, Image, LogOut, LayoutDashboard, Car } from 'lucide-react';
 
 const Dashboard = () => {
     const navigate = useNavigate();
@@ -52,6 +52,21 @@ const Dashboard = () => {
                         <div>
                             <h2 className="text-2xl font-bold text-white group-hover:text-gray-300 transition-colors">Manage Gallery</h2>
                             <p className="text-gray-400 mt-2">View, edit, and delete existing photos</p>
+                        </div>
+                    </div>
+                </Link>
+
+                <Link to="/admin/cars/manage" className="group block p-8 bg-gray-900/40 backdrop-blur rounded-2xl shadow-lg hover:shadow-gray-700/20 transition-all duration-300 border border-gray-800 hover:border-gray-600 relative overflow-hidden">
+                    <div className="absolute top-0 right-0 p-4 opacity-10 group-hover:opacity-20 transition-opacity">
+                        <Car className="h-32 w-32 text-gray-400 transform -rotate-12" />
+                    </div>
+                    <div className="flex items-center relative z-10">
+                        <div className="p-4 bg-gray-800 rounded-2xl mr-6 group-hover:scale-110 transition-transform">
+                            <Car className="h-8 w-8 text-gray-400" />
+                        </div>
+                        <div>
+                            <h2 className="text-2xl font-bold text-white group-hover:text-gray-300 transition-colors">Manage Cars</h2>
+                            <p className="text-gray-400 mt-2">Add, edit, or remove cars from inventory</p>
                         </div>
                     </div>
                 </Link>

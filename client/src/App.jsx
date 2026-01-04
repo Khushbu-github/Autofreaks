@@ -11,7 +11,10 @@ import Gallery from './pages/Gallery';
 import Login from './pages/admin/Login';
 import Dashboard from './pages/admin/Dashboard';
 import UploadGallery from './pages/admin/UploadGallery';
+import UploadGallery from './pages/admin/UploadGallery';
 import ManageGallery from './pages/admin/ManageGallery';
+import ManageCars from './pages/admin/ManageCars';
+import AddCar from './pages/admin/AddCar';
 import ProtectedRoute from './components/ProtectedRoute';
 import Footer from './components/Footer';
 import About from './pages/About';
@@ -78,6 +81,8 @@ function App() {
               <Route path="/admin/dashboard" element={<Dashboard />} />
               <Route path="/admin/gallery/upload" element={<UploadGallery />} />
               <Route path="/admin/gallery/manage" element={<ManageGallery />} />
+              <Route path="/admin/cars/manage" element={<ManageCars />} />
+              <Route path="/admin/cars/add" element={<AddCar />} />
             </Route>
           </Routes>
         </main>
