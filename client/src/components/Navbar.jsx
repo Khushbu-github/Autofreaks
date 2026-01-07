@@ -60,7 +60,7 @@ const Navbar = () => {
                 </div>
 
                 {/* Mobile menu */}
-                <div className={`lg:hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}>
+                <div className={`lg:hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-[80vh] opacity-100' : 'max-h-0 opacity-0'}`}>
                     <div className="px-4 pt-2 pb-4 space-y-1 border-t border-gray-800 bg-black/50">
                         {navs.map((item, index) => (
                             <Link
@@ -81,14 +81,7 @@ const Navbar = () => {
                         ))}
                         <Link
                             to="/admin/login"
-                            className="block px-4 py-3 text-base font-medium text-gray-500 hover:text-gray-300 hover:bg-gray-800 rounded-xl opacity-0"
-                            style={isOpen ? {
-                                animationName: 'fadeInUp',
-                                animationDuration: '0.5s',
-                                animationTimingFunction: 'ease-out',
-                                animationFillMode: 'forwards',
-                                animationDelay: `${navs.length * 0.1}s`
-                            } : {}}
+                            className="block px-4 py-3 text-base font-medium text-gray-300 hover:text-white hover:bg-gray-800 rounded-xl"
                             onClick={() => setIsOpen(false)}
                         >
                             Admin Login
