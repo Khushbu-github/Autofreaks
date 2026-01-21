@@ -192,7 +192,7 @@ const CarDetails = () => {
 
                     <div className="mt-auto">
                         <a
-                            href={`https://wa.me/919980666004?text=Hi, I want to book a test drive for the ${car.name}`}
+                            href={`https://wa.me/919900009946?text=Hi, I want to book a test drive for the ${car.name}`}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="w-full bg-white text-black py-4 rounded-xl font-bold text-lg hover:bg-gray-200 transition-all shadow-xl hover:shadow-2xl hover:shadow-white/10 transform hover:-translate-y-1 mb-4 flex justify-center items-center gap-2"
@@ -200,7 +200,7 @@ const CarDetails = () => {
                             Book Test Drive
                         </a>
                         <a
-                            href={`https://wa.me/919980666004?text=Hi, I am interested in the ${car.name}`}
+                            href={`https://wa.me/919900009946?text=Hi, I am interested in the ${car.name}`}
                             target="_blank"
                             rel="noopener noreferrer"
                             className="block w-full text-center py-4 rounded-xl font-bold text-lg border border-green-600 text-green-500 hover:bg-green-600/10 transition-all"
@@ -208,7 +208,7 @@ const CarDetails = () => {
                             Chat on WhatsApp
                         </a>
                         <p className="text-center text-sm text-gray-500 mt-4">
-                            Questions? Call us at <span className="text-white font-semibold">+91 99806 66004</span>
+                            Questions? Call us at <span className="text-white font-semibold">+91 99000 09946</span>
                         </p>
                     </div>
                 </div>

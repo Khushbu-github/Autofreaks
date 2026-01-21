@@ -3,7 +3,7 @@ import { Quote } from 'lucide-react';
 
 const testimonials = [
     {
-        name: "RIKKI MUTTAPPA RAI",
+        name: "RICKY MUTTAPPA RAI",
         title: "EL General",
         text: "AUTOFREAKS has redefined the luxury car buying experience. Their commitment to quality and transparency is truly commendable. A name you can trust."
     },
@@ -26,18 +26,18 @@ const testimonials = [
 
 const Testimonials = () => {
     return (
-        <section className="py-24 bg-transparent relative overflow-hidden">
+        <section className="py-12 bg-transparent relative overflow-hidden">
             {/* Background Decorative Element */}
             <div className="absolute top-0 right-0 -mr-20 -mt-20 w-80 h-80 bg-red-600/5 rounded-full blur-3xl"></div>
             <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-80 h-80 bg-red-600/5 rounded-full blur-3xl"></div>
 
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-                <div className="max-w-3xl mb-12 sm:mb-16" data-aos="fade-up">
+                <div className="max-w-3xl mb-8 sm:mb-12" data-aos="fade-up">
                     <h2 className="text-xs sm:text-sm font-bold text-red-600 tracking-[0.3em] uppercase mb-2">Testimonials</h2>
                     <p className="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white italic">Trusted by Distinguished Personalities</p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8 lg:gap-12">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
                     {testimonials.map((testimonial, index) => (
                         <div
                             key={index}
