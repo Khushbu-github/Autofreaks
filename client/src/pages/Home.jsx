@@ -49,7 +49,7 @@ const Home = () => {
                         </p>
                     </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-10 sm:mb-12">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 mb-10 sm:mb-12">
                         <div className="bg-gray-900/50 backdrop-blur border border-gray-800 rounded-xl p-5 sm:p-6 hover:border-red-600/50 transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
                             <div className="flex items-center mb-3 sm:mb-4">
                                 <div className="h-10 w-10 sm:h-12 sm:w-12 rounded-full bg-red-600/20 flex items-center justify-center text-xl sm:text-2xl mr-3 sm:mr-4">
@@ -83,6 +83,18 @@ const Home = () => {
                             </div>
                             <p className="text-sm sm:text-base text-gray-400">
                                 Located in Jayanagar 7th Block, Bangalore - one of India's premium automobile dealerships
+                            </p>
+                        </div>
+
+                        <div className="bg-gray-900/50 backdrop-blur border border-gray-800 rounded-xl p-5 sm:p-6 hover:border-red-600/50 transition-all duration-300" data-aos="fade-up" data-aos-delay="400">
+                            <div className="flex items-center mb-3 sm:mb-4">
+                                <div className="h-10 w-10 sm:h-12 sm:w-12 rounded-full bg-red-600/20 flex items-center justify-center text-xl sm:text-2xl mr-3 sm:mr-4">
+                                    💰
+                                </div>
+                                <h3 className="text-lg sm:text-xl font-bold text-white">Competitive Prices</h3>
+                            </div>
+                            <p className="text-sm sm:text-base text-gray-400">
+                                Get the best value for your money with our transparent pricing and flexible financing options
                             </p>
                         </div>
                     </div>

@@ -4,7 +4,7 @@ import { Quote } from 'lucide-react';
 const testimonials = [
     {
         name: "RIKKI MUTTAPPA RAI",
-        title: "Social Worker & Entrepreneur",
+        title: "EL General",
         text: "AUTOFREAKS has redefined the luxury car buying experience. Their commitment to quality and transparency is truly commendable. A name you can trust."
     },
     {

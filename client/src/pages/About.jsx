@@ -37,7 +37,16 @@ const About = () => {
 
                         <div className="text-gray-400 text-sm leading-relaxed space-y-4">
                             <p>
-                                As a trusted pre-owned luxury car dealer in 7th Block Jayanagar, we offer high-end cars and a superior luxury car buying experience. Explore verified second-hand luxury vehicles in our state-of-the-art showroom. Experience the luxury car lifestyle at one of India's premium automobile dealerships.
+                                As a trusted pre-owned luxury car dealer located in the heart of 7th Block, Jayanagar, we specialize in offering an exclusive collection of high-end, pre-owned luxury vehicles that redefine sophistication and performance. Our dealership is dedicated to delivering a superior luxury car buying experience, where transparency, quality, and customer satisfaction are at the core of everything we do.
+                            </p>
+                            <p>
+                                Each vehicle in our showroom is carefully handpicked, thoroughly inspected, and verified to meet the highest standards of safety, performance, and aesthetics. From iconic luxury sedans and premium SUVs to performance-driven executive cars, our collection represents the finest brands in the automotive world. We ensure that every car reflects elegance, comfort, and reliability, giving our customers complete peace of mind with every purchase.
+                            </p>
+                            <p>
+                                Our state-of-the-art showroom is designed to offer a refined and welcoming environment, allowing customers to explore luxury vehicles at ease. With a knowledgeable and professional team, we offer personalized consultation, transparent vehicle histories, and a seamless ownership transition.
+                            </p>
+                            <p>
+                                We believe luxury is not merely about owning a car—it is about embracing a lifestyle. With uncompromising attention to detail and a passion for excellence, we deliver an experience that redefines trust, comfort, and prestige. Discover the art of luxury motoring at one of India's most respected pre-owned luxury car dealerships, where refinement meets performance and every journey begins with distinction.
                             </p>
                         </div>
                     </div>
@@ -51,11 +60,11 @@ const About = () => {
                             </div>
                             <div className="grid grid-cols-2 gap-4 w-full">
                                 <div className="bg-white/5 p-4 rounded-lg">
-                                    <span className="block text-2xl font-bold text-red-500">100+</span>
+                                    <span className="block text-2xl font-bold text-red-500">5000+</span>
                                     <span className="text-xs text-gray-400 uppercase">Happy Clients</span>
                                 </div>
                                 <div className="bg-white/5 p-4 rounded-lg">
-                                    <span className="block text-2xl font-bold text-red-500">50+</span>
+                                    <span className="block text-2xl font-bold text-red-500">10000+</span>
                                     <span className="text-xs text-gray-400 uppercase">Luxury Cars</span>
                                 </div>
                             </div>
@@ -97,6 +106,27 @@ const About = () => {
                                 <span className="text-red-600">Eye it</span>, <span className="text-gray-400">Drive it</span>, <span className="text-white">Own it</span>
                             </p>
                             <span className="absolute bottom-0 right-0 text-6xl text-gray-800 opacity-50">"</span>
+                        </div>
+
+                        {/* Deepak's Biography */}
+                        <div className="bg-gradient-to-br from-gray-900/50 to-black/50 border border-gray-800 rounded-2xl p-8 md:p-10 shadow-2xl backdrop-blur-sm">
+                            <div className="space-y-6 text-gray-300 leading-relaxed text-justify">
+                                <p>
+                                    Deepak is the CEO and visionary leader of Autofreaks, a name that today stands for excellence, integrity, and trust in the automobile industry. His journey is a powerful story of determination, resilience, and unwavering belief in hard work. Born into a very poor family, Deepak's early life was filled with challenges that could have easily limited his dreams. However, instead of allowing circumstances to define him, he chose to rise above them through knowledge, relentless effort, and smart decision-making.
+                                </p>
+                                <p>
+                                    From a young age, Deepak understood the value of discipline, patience, and perseverance. He worked tirelessly throughout his childhood and formative years, gaining experience, learning from every opportunity, and constantly improving himself. His success is not the result of overnight fortune, but the outcome of years of dedication, sacrifice, and an unbreakable mindset. By combining hard work with smart work, he gradually built a strong foundation that led him to his current position as a respected entrepreneur and leader.
+                                </p>
+                                <p>
+                                    Today, Deepak is one of the most recognized and admired personalities in his field. Despite his achievements, he remains humble, approachable, and deeply connected to people from all walks of life. He is known for being supportive, friendly, patient, and genuinely caring toward his clients, staff, and associates. He believes in leading by example and treats everyone with equal respect, dignity, and understanding. His leadership style is rooted in empathy, trust, and long-term vision, which has helped him build not just a successful business, but also a loyal and motivated team.
+                                </p>
+                                <p>
+                                    Beyond business, Deepak is widely appreciated for his strong sense of social responsibility. He has actively contributed to social welfare, charity, and community development, driven by a heartfelt desire to give back to society. His charitable efforts and concern for people in need have earned him several prestigious recognitions and awards, including honors from Bhumi TV, the Vishwa Kannadiga Award, and many other platforms that acknowledge his dedication to social work and humanitarian causes.
+                                </p>
+                                <p>
+                                    Deepak strongly believes that true success is measured not only by financial growth, but by the positive impact one creates in the lives of others. His life story continues to inspire countless individuals, especially young entrepreneurs, proving that with honesty, perseverance, and compassion, it is possible to rise from humble beginnings to a position of influence and respect. He stands today not just as a successful CEO, but as a role model, a philanthropist, and a leader who values humanity above all.
+                                </p>
+                            </div>
                         </div>
 
                         <div className="bg-gradient-to-br from-gray-900 to-black border border-gray-800 rounded-2xl p-8 md:p-12 shadow-2xl relative overflow-hidden group hover:border-red-600/30 transition-colors duration-500">

@@ -17,6 +17,7 @@ import ManageCars from './pages/admin/ManageCars';
 import AddCar from './pages/admin/AddCar';
 import ProtectedRoute from './components/ProtectedRoute';
 import Footer from './components/Footer';
+import FloatingContact from './components/FloatingContact';
 import About from './pages/About';
 import Contact from './pages/Contact';
 import SellCar from './pages/SellCar';
@@ -87,6 +88,7 @@ function App() {
           </Routes>
         </main>
         <Footer />
+        <FloatingContact />
       </div>
     </Router>
   );

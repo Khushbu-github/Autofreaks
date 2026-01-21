@@ -67,6 +67,34 @@ const Contact = () => {
                         </a>
                     </div>
                 </div>
+
+                {/* Google Maps Section */}
+                <div className="mt-16">
+                    <div className="text-center mb-8">
+                        <h2 className="text-3xl md:text-4xl font-bold text-white mb-3">
+                            Find Us on <span className="text-red-600">Map</span>
+                        </h2>
+                        <p className="text-gray-400">
+                            Visit our showroom in the heart of Jayanagar, Bangalore
+                        </p>
+                    </div>
+
+                    <div className="bg-black/50 border border-gray-800 rounded-2xl overflow-hidden hover:border-red-600/50 transition-colors duration-300">
+                        <div className="relative w-full h-[400px] md:h-[500px]">
+                            <iframe
+                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.3976543210123!2d77.5746379!3d12.9256372!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae159c539f821f%3A0x176b8641a1955ab1!2sAuto%20Freaks!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"
+                                width="100%"
+                                height="100%"
+                                style={{ border: 0 }}
+                                allowFullScreen=""
+                                loading="lazy"
+                                referrerPolicy="no-referrer-when-downgrade"
+                                title="AUTOFREAKS Showroom Location"
+                                className="grayscale hover:grayscale-0 transition-all duration-500"
+                            ></iframe>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     );
