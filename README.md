@@ -113,46 +113,7 @@ npm run dev
 
 ---
 
-## 🔌 API Routes
 
-### 🚘 Cars (`/cars`)
-- `GET /cars` - Fetch all vehicles
-- `GET /cars/:id` - Fetch singular vehicle by ID
-- `POST /cars` - (Admin) Create a car listing (Handles Multer image array)
-- `DELETE /cars/:id` - (Admin) Delete vehicle
-
-### 🖼️ Gallery (`/gallery`)
-- `GET /gallery` - Fetch all gallery images
-- `POST /gallery` - (Admin) Upload to gallery
-
-### 🔐 Authentication (`/auth`)
-- `POST /auth/login` - Validates credentials and returns JWT token
-- `POST /auth/register` - Registers a new admin (Should be disabled in production after initial setup)
 
 ---
 
-## 📂 Project Structure
-```text
-car-dealership/
-├── client/
-│   ├── src/
-│   │   ├── assets/       # Static branding (Logo.png)
-│   │   ├── components/   # Reusable UI (Navbar, Footer, ProtectedRoute)
-│   │   ├── pages/        # Public views (Home, Cars, About)
-│   │   │   └── admin/    # Protected views (Dashboard, AddCar, UploadGallery)
-│   │   ├── utils/        # API and utility functions
-│   │   ├── App.jsx       # Routing Engine
-│   │   └── main.jsx      # React Entry Point
-│   ├── index.html
-│   ├── package.json
-│   └── tailwind.config.js
-│
-├── server/
-│   ├── config/           # Database connections (db.js)
-│   ├── controllers/      # Route logic handlers
-│   ├── middleware/       # Multer config & JWT authenticators
-│   ├── models/           # Mongoose Schemas (Car.js, User.js, Gallery.js)
-│   ├── routes/           # Express Route definitions
-│   ├── server.js         # Express App Entry Point
-│   └── package.json
-```
