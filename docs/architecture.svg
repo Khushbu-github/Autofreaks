@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1240" height="900" viewBox="0 0 1240 900" role="img" aria-label="AutoFreaks system architecture diagram">
+  <style>
+    .bg    { fill:#0b1220; }
+    .h1    { font:700 26px system-ui,-apple-system,Segoe UI,Roboto,sans-serif; fill:#e6edf3; }
+    .h2    { font:400 14px system-ui,-apple-system,Segoe UI,Roboto,sans-serif; fill:#8b9bb4; }
+    .lyr   { font:700 13px system-ui,-apple-system,Segoe UI,Roboto,sans-serif; letter-spacing:1.2px; }
+    .badge { font:600 11px system-ui,-apple-system,Segoe UI,Roboto,sans-serif; letter-spacing:1px; fill:#64748b; }
+    .nt    { font:600 15px system-ui,-apple-system,Segoe UI,Roboto,sans-serif; fill:#e6edf3; }
+    .ns    { font:400 11.5px ui-monospace,SFMono-Regular,Consolas,monospace; fill:#94a3b8; }
+    .flow  { font:600 12px system-ui,-apple-system,Segoe UI,Roboto,sans-serif; fill:#cbd5e1; }
+    .flows { font:400 11.5px ui-monospace,SFMono-Regular,Consolas,monospace; fill:#7d8ea8; }
+  </style>
+
+  <rect class="bg" width="1240" height="900"/>
+
+  <text class="h1" x="40" y="48">AutoFreaks — System Architecture</text>
+  <text class="h2" x="40" y="74">MERN stack · React 19 SPA · Express 5 REST API · MongoDB Atlas · Cloudinary media CDN</text>
+
+  <!-- LAYER 1 - CLIENT -->
+  <rect x="40" y="100" width="1160" height="190" rx="14" fill="#101d33" stroke="#3b82f6" stroke-width="1.5"/>
+  <text class="lyr" x="64" y="128" fill="#60a5fa">PRESENTATION · Browser (React 19 + Vite 7 + Tailwind CSS v4)</text>
+  <text class="badge" x="1176" y="128" text-anchor="end">LAYER 1</text>
+
+  <rect x="64"  y="150" width="260" height="112" rx="10" fill="#16294a" stroke="#2f4f80"/>
+  <text class="nt" x="194" y="182" text-anchor="middle">Customer Portal</text>
+  <text class="ns" x="194" y="206" text-anchor="middle">Home · Cars · CarDetails</text>
+  <text class="ns" x="194" y="226" text-anchor="middle">Gallery · Buy · Sell · Contact</text>
+
+  <rect x="348" y="150" width="260" height="112" rx="10" fill="#16294a" stroke="#2f4f80"/>
+  <text class="nt" x="478" y="182" text-anchor="middle">Admin Dashboard</text>
+  <text class="ns" x="478" y="206" text-anchor="middle">Add / Manage Cars</text>
+  <text class="ns" x="478" y="226" text-anchor="middle">Upload / Manage Gallery</text>
+
+  <rect x="632" y="150" width="260" height="112" rx="10" fill="#16294a" stroke="#2f4f80"/>
+  <text class="nt" x="762" y="182" text-anchor="middle">Router + Route Guard</text>
+  <text class="ns" x="762" y="206" text-anchor="middle">React Router v7</text>
+  <text class="ns" x="762" y="226" text-anchor="middle">ProtectedRoute + localStorage JWT</text>
+
+  <rect x="916" y="150" width="260" height="112" rx="10" fill="#16294a" stroke="#2f4f80"/>
+  <text class="nt" x="1046" y="182" text-anchor="middle">Axios HTTP Client</text>
+  <text class="ns" x="1046" y="206" text-anchor="middle">VITE_API_BASE_URL</text>
+  <text class="ns" x="1046" y="226" text-anchor="middle">attaches Bearer token</text>
+
+  <!-- request / response -->
+  <path d="M 620 290 L 620 345" stroke="#3b82f6" stroke-width="2" fill="none"/>
+  <polygon points="620,358 613,344 627,344" fill="#3b82f6"/>
+  <text class="flow"  x="640" y="313">Request · HTTPS REST/JSON</text>
+  <text class="flows" x="640" y="332">Authorization: Bearer &lt;jwt&gt; · multipart/form-data</text>
+
+  <path d="M 540 352 L 540 305" stroke="#475569" stroke-width="2" fill="none" stroke-dasharray="5 4"/>
+  <polygon points="540,292 533,306 547,306" fill="#475569"/>
+  <text class="flow"  x="520" y="313" text-anchor="end">Response · JSON</text>
+  <text class="flows" x="520" y="332" text-anchor="end">200 / 201 · 401 Unauthorized</text>
+
+  <!-- LAYER 2 - API -->
+  <rect x="40" y="360" width="1160" height="310" rx="14" fill="#1a1533" stroke="#a855f7" stroke-width="1.5"/>
+  <text class="lyr" x="64" y="388" fill="#c084fc">APPLICATION · Node.js REST API (Express 5)</text>
+  <text class="badge" x="1176" y="388" text-anchor="end">LAYER 2</text>
+
+  <rect x="64"  y="406" width="354" height="84" rx="10" fill="#251d45" stroke="#4c3d7a"/>
+  <text class="nt" x="241" y="436" text-anchor="middle">Express Server</text>
+  <text class="ns" x="241" y="458" text-anchor="middle">server.js · routers /auth /cars /gallery</text>
+  <text class="ns" x="241" y="476" text-anchor="middle">CORS whitelist: autofreaks.in · :5173</text>
+
+  <rect x="442" y="406" width="354" height="84" rx="10" fill="#251d45" stroke="#4c3d7a"/>
+  <text class="nt" x="619" y="436" text-anchor="middle">JWT Auth Guard</text>
+  <text class="ns" x="619" y="458" text-anchor="middle">authMiddleware.js · jsonwebtoken</text>
+  <text class="ns" x="619" y="476" text-anchor="middle">verifies Bearer token on private routes</text>
+
+  <rect x="820" y="406" width="356" height="84" rx="10" fill="#251d45" stroke="#4c3d7a"/>
+  <text class="nt" x="998" y="436" text-anchor="middle">Multer Upload Pipeline</text>
+  <text class="ns" x="998" y="458" text-anchor="middle">disk storage to /uploads (temp)</text>
+  <text class="ns" x="998" y="476" text-anchor="middle">jpeg · png · webp · max 10 MB</text>
+
+  <path d="M 241 490 L 241 500" stroke="#a855f7" stroke-width="2"/><polygon points="241,506 235,496 247,496" fill="#a855f7"/>
+  <path d="M 619 490 L 619 500" stroke="#a855f7" stroke-width="2"/><polygon points="619,506 613,496 625,496" fill="#a855f7"/>
+  <path d="M 998 490 L 998 500" stroke="#a855f7" stroke-width="2"/><polygon points="998,506 992,496 1004,496" fill="#a855f7"/>
+
+  <rect x="64"  y="506" width="354" height="64" rx="10" fill="#2c2352" stroke="#4c3d7a"/>
+  <text class="nt" x="241" y="530" text-anchor="middle">authController</text>
+  <text class="ns" x="241" y="552" text-anchor="middle">login · register · bcrypt · JWT (30d)</text>
+
+  <rect x="442" y="506" width="354" height="64" rx="10" fill="#2c2352" stroke="#4c3d7a"/>
+  <text class="nt" x="619" y="530" text-anchor="middle">carController</text>
+  <text class="ns" x="619" y="552" text-anchor="middle">CRUD /cars · up to 5 images per listing</text>
+
+  <rect x="820" y="506" width="356" height="64" rx="10" fill="#2c2352" stroke="#4c3d7a"/>
+  <text class="nt" x="998" y="530" text-anchor="middle">galleryController</text>
+  <text class="ns" x="998" y="552" text-anchor="middle">batch upload · list · delete showcase media</text>
+
+  <path d="M 241 570 L 241 580" stroke="#a855f7" stroke-width="2"/><polygon points="241,586 235,576 247,576" fill="#a855f7"/>
+  <path d="M 619 570 L 619 580" stroke="#a855f7" stroke-width="2"/><polygon points="619,586 613,576 625,576" fill="#a855f7"/>
+  <path d="M 998 570 L 998 580" stroke="#a855f7" stroke-width="2"/><polygon points="998,586 992,576 1004,576" fill="#a855f7"/>
+
+  <rect x="64"  y="586" width="354" height="64" rx="10" fill="#221b40" stroke="#4c3d7a" stroke-dasharray="4 3"/>
+  <text class="nt" x="241" y="610" text-anchor="middle">User model</text>
+  <text class="ns" x="241" y="632" text-anchor="middle">pre-save bcrypt hash · matchPassword()</text>
+
+  <rect x="442" y="586" width="354" height="64" rx="10" fill="#221b40" stroke="#4c3d7a" stroke-dasharray="4 3"/>
+  <text class="nt" x="619" y="610" text-anchor="middle">Car model</text>
+  <text class="ns" x="619" y="632" text-anchor="middle">specs · features[] · images[url, publicId]</text>
+
+  <rect x="820" y="586" width="356" height="64" rx="10" fill="#221b40" stroke="#4c3d7a" stroke-dasharray="4 3"/>
+  <text class="nt" x="998" y="610" text-anchor="middle">Gallery model</text>
+  <text class="ns" x="998" y="632" text-anchor="middle">imageUrl · publicId · title · createdAt</text>
+
+  <path d="M 500 670 C 500 706, 336 706, 336 728" stroke="#10b981" stroke-width="2" fill="none"/>
+  <polygon points="336,740 330,726 342,726" fill="#10b981"/>
+  <text class="flows" x="418" y="700" text-anchor="middle" fill="#5eead4">Mongoose ODM</text>
+
+  <path d="M 1050 670 C 1050 706, 904 706, 904 728" stroke="#10b981" stroke-width="2" fill="none"/>
+  <polygon points="904,740 898,726 910,726" fill="#10b981"/>
+  <text class="flows" x="972" y="700" text-anchor="middle" fill="#5eead4">upload_stream / destroy</text>
+
+  <!-- LAYER 3 - CLOUD -->
+  <rect x="40" y="740" width="1160" height="120" rx="14" fill="#0e2620" stroke="#10b981" stroke-width="1.5"/>
+  <text class="lyr" x="64" y="768" fill="#34d399">DATA · Managed Cloud Services</text>
+  <text class="badge" x="1176" y="768" text-anchor="end">LAYER 3</text>
+
+  <rect x="64"  y="780" width="544" height="64" rx="10" fill="#14332b" stroke="#1f6f57"/>
+  <text class="nt" x="336" y="806" text-anchor="middle">MongoDB Atlas</text>
+  <text class="ns" x="336" y="828" text-anchor="middle">collections: users · cars · gallery</text>
+
+  <rect x="632" y="780" width="544" height="64" rx="10" fill="#14332b" stroke="#1f6f57"/>
+  <text class="nt" x="904" y="806" text-anchor="middle">Cloudinary CDN</text>
+  <text class="ns" x="904" y="828" text-anchor="middle">car-dealership-cars · gallery — temp file removed via fs.unlinkSync()</text>
+
+  <text class="badge" x="1176" y="884" text-anchor="end">Stateless JWT auth · no server-side sessions · media never stored on the API host</text>
+</svg>
